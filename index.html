@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="#" class="nav-item active">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="#" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge"></span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-badge"></span>
+                </button>
+                <div class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Academic Advising Banner -->
+            <div class="advising-banner">
+                <div class="banner-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="banner-text">
+                    <h3>Request Academic Advising</h3>
+                    <p>Get help with course selection, career guidance, and more</p>
+                </div>
+                <button class="banner-btn">
+                    Request <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="dashboard-grid">
+                <!-- This Week Section -->
+                <section class="widget widget-this-week">
+                    <div class="widget-header">
+                        <h2 class="widget-title">THIS WEEK</h2>
+                        <span class="week-badge">Week 10</span>
+                    </div>
+                    <div class="week-calendar">
+                        <div class="day-item">
+                            <span class="day-label">MON</span>
+                            <span class="day-number">9</span>
+                        </div>
+                        <div class="day-item active">
+                            <span class="day-label">TUE</span>
+                            <span class="day-number">10</span>
+                        </div>
+                        <div class="day-item">
+                            <span class="day-label">WED</span>
+                            <span class="day-number">11</span>
+                        </div>
+                        <div class="day-item">
+                            <span class="day-label">THU</span>
+                            <span class="day-number">12</span>
+                        </div>
+                        <div class="day-item">
+                            <span class="day-label">FRI</span>
+                            <span class="day-number">13</span>
+                        </div>
+                        <div class="day-item">
+                            <span class="day-label">SAT</span>
+                            <span class="day-number">14</span>
+                        </div>
+                        <div class="day-item">
+                            <span class="day-label">SUN</span>
+                            <span class="day-number">15</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Grades Section -->
+                <section class="widget widget-grades">
+                    <div class="widget-header">
+                        <h2 class="widget-title">GRADES</h2>
+                        <span class="course-count">8 Courses</span>
+                    </div>
+                    <div class="grades-list">
+                        <div class="grade-item">
+                            <div class="grade-subject">
+                                <span class="subject-name">Mathematics</span>
+                                <span class="teacher-name">Prof. Johnson</span>
+                            </div>
+                            <div class="grade-value grade-a">A+</div>
+                        </div>
+                        <div class="grade-item">
+                            <div class="grade-subject">
+                                <span class="subject-name">Physics</span>
+                                <span class="teacher-name">Dr. Smith</span>
+                            </div>
+                            <div class="grade-value grade-a-minus">A-</div>
+                        </div>
+                        <div class="grade-item">
+                            <div class="grade-subject">
+                                <span class="subject-name">Chemistry</span>
+                                <span class="teacher-name">Prof. Davis</span>
+                            </div>
+                            <div class="grade-value grade-b">B+</div>
+                        </div>
+                        <div class="grade-item">
+                            <div class="grade-subject">
+                                <span class="subject-name">English Literature</span>
+                                <span class="teacher-name">Ms. Wilson</span>
+                            </div>
+                            <div class="grade-value grade-a">A</div>
+                        </div>
+                        <div class="grade-item">
+                            <div class="grade-subject">
+                                <span class="subject-name">Computer Science</span>
+                                <span class="teacher-name">Dr. Brown</span>
+                            </div>
+                            <div class="grade-value grade-a">A+</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Schedule Section -->
+                <section class="widget widget-schedule">
+                    <div class="widget-header">
+                        <h2 class="widget-title">SCHEDULE</h2>
+                        <span class="schedule-badge">Today</span>
+                    </div>
+                    <div class="schedule-list">
+                        <div class="schedule-card schedule-math">
+                            <div class="schedule-icon">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <h4>Mathematics</h4>
+                                <span class="schedule-time">14:00</span>
+                            </div>
+                            <div class="schedule-grade">B+</div>
+                        </div>
+                        <div class="schedule-card schedule-physics">
+                            <div class="schedule-icon">
+                                <i class="fa-solid fa-atom"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <h4>Physics</h4>
+                                <span class="schedule-time">16:00</span>
+                            </div>
+                            <div class="schedule-grade">A-</div>
+                        </div>
+                        <div class="schedule-card schedule-chemistry">
+                            <div class="schedule-icon">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+                            <div class="schedule-info">
+                                <h4>Chemistry</h4>
+                                <span class="schedule-time">17:00</span>
+                            </div>
+                            <div class="schedule-grade">B</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reminders Section -->
+                <section class="widget widget-reminders">
+                    <div class="widget-header">
+                        <h2 class="widget-title">REMINDERS</h2>
+                        <span class="reminder-badge">+Add</span>
+                    </div>
+                    <div class="reminder-list">
+                        <div class="reminder-item">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Finish lab report for Chemistry</span>
+                        </div>
+                        <div class="reminder-item">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Study for Mathematics exam</span>
+                        </div>
+                        <div class="reminder-item">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Submit Physics homework</span>
+                        </div>
+                        <div class="reminder-item">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <span>Prepare presentation for English class</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Progress Section -->
+                <section class="widget widget-progress">
+                    <div class="widget-header">
+                        <h2 class="widget-title">PROGRESS</h2>
+                    </div>
+                    <div class="progress-chart">
+                        <svg viewBox="0 0 600 250" preserveAspectRatio="xMidYMid meet">
+                            <defs>
+                                <linearGradient id="progressGradient" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#4d8fe8" stop-opacity="0.2" />
+                                    <stop offset="100%" stop-color="#4d8fe8" stop-opacity="0.02" />
+                                </linearGradient>
+                            </defs>
+
+                            <g stroke="#E0E0E0" stroke-width="1" stroke-dasharray="4 4">
+                                <line x1="40" y1="20" x2="600" y2="20" />
+                                <line x1="40" y1="70" x2="600" y2="70" />
+                                <line x1="40" y1="120" x2="600" y2="120" />
+                                <line x1="40" y1="170" x2="600" y2="170" />
+                                <line x1="40" y1="220" x2="600" y2="220" />
+                            </g>
+
+                            <g fill="#9CA3AF" font-family="sans-serif" font-size="10" text-anchor="end">
+                                <text x="30" y="25">100%</text>
+                                <text x="30" y="75">75%</text>
+                                <text x="30" y="125">50%</text>
+                                <text x="30" y="175">25%</text>
+                                <text x="30" y="225">0%</text>
+                            </g>
+
+                            <path d="M 40,130 C 120,105 200,105 300,80 C 400,50 480,60 600,65" stroke="#4d8fe8"
+                                stroke-width="3" fill="none" stroke-linecap="round" />
+
+                            <path d="M 40,130 C 120,105 200,105 300,80 C 400,50 480,60 600,65 L 600,220 L 40,220 Z"
+                                fill="url(#progressGradient)" stroke="none" />
+
+                            <g fill="#9CA3AF" font-family="sans-serif" font-size="10" text-anchor="middle"
+                                letter-spacing="0.5px">
+                                <text x="40" y="240">JAN</text>
+                                <line x1="40" y1="220" x2="40" y2="225" stroke="#9CA3AF" stroke-width="1" />
+                                <text x="140" y="240">FEB</text>
+                                <line x1="140" y1="220" x2="140" y2="225" stroke="#9CA3AF" stroke-width="1" />
+                                <text x="240" y="240">MAR</text>
+                                <line x1="240" y1="220" x2="240" y2="225" stroke="#9CA3AF" stroke-width="1" />
+                                <text x="340" y="240">APR</text>
+                                <line x1="340" y1="220" x2="340" y2="225" stroke="#9CA3AF" stroke-width="1" />
+                                <text x="440" y="240">MAY</text>
+                                <line x1="440" y1="220" x2="440" y2="225" stroke="#9CA3AF" stroke-width="1" />
+                                <text x="540" y="240">JUN</text>
+                                <line x1="540" y1="220" x2="540" y2="225" stroke="#9CA3AF" stroke-width="1" />
+                            </g>
+                        </svg>
+                    </div>
+                </section>
+
+                <!-- Materials Section -->
+                <section class="widget widget-materials">
+                    <div class="widget-header">
+                        <h2 class="widget-title">MATERIALS</h2>
+                        <span class="material-count">5 Files</span>
+                    </div>
+                    <div class="materials-list">
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+                                <span class="material-name">Lab activity 4</span>
+                            </div>
+                            <div class="material-right">
+                                <span class="material-type">PDF</span>
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+                                <span class="material-name">Chapter 5 notes</span>
+                            </div>
+                            <div class="material-right">
+                                <span class="material-type">DOC</span>
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+                                <span class="material-name">Practice problems set 3</span>
+                            </div>
+                            <div class="material-right">
+                                <span class="material-type">PDF</span>
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-solid fa-file-powerpoint"></i>
+                                </div>
+                                <span class="material-name">Lecture slides - Week 10</span>
+                            </div>
+                            <div class="material-right">
+                                <span class="material-type">PPT</span>
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+                                <span class="material-name">Assignment guidelines</span>
+                            </div>
+                            <div class="material-right">
+                                <span class="material-type">PDF</span>
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
