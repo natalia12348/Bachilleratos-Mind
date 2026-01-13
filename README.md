@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="img/logo-outline.png" alt="Bachillerato's Mind Logo" width="300px"/>
+  <img src="img/logo-outline.png" alt="Bachillerato's Mind Logo" width="400px"/>
   <p>A modern, fully responsive student dashboard web application built with pure HTML5, CSS3, and JavaScript.</p>
 </div>
 
