@@ -74,8 +74,6 @@ Bachilleratos-Mind/
 │   ├── settings.js            # Settings page functionality
 │   └── store.js               # Store page functionality
 ├── 📁 img/                    # Images and assets
-├── 📋 CSS_NAMING_CONVENTIONS.md        # CSS naming guidelines
-├── 📋 MOBILE_REFACTOR_REPORT.md        # Mobile optimization report
 └── 📖 README.md               # This file
 ```
 
