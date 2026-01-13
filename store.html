@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materials Store - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item active">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="store-content">
+            <!-- Success Toast Notification -->
+            <div class="store-toast success-toast" id="successToast" style="display: none;">
+                <div class="toast-content">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div class="toast-text">
+                        <p class="toast-message"><strong>Calculus Chapter 5 Notes</strong> added to cart</p>
+                        <a href="cart.html" class="toast-link">Go to cart to complete your purchase</a>
+                    </div>
+                </div>
+                <button class="toast-close" onclick="closeToast()">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Store Header -->
+            <div class="store-header">
+                <div class="store-header-left">
+                    <h1 class="page-title">Materials Store</h1>
+                    <p class="store-subtitle">12 materials available • 0 purchased</p>
+                </div>
+                <div class="store-header-right">
+                    <button class="cart-btn" onclick="window.location.href='cart.html'">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart
+                        <span class="cart-badge">1</span>
+                    </button>
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search materials...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="store-grid">
+                <!-- Product Card 1 - Calculus Notes (In Cart) -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Calculus Chapter 5 Notes</h3>
+                            <p class="product-code">MATH 101</p>
+                        </div>
+                        <span class="product-tag">Mathematics</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Comprehensive notes covering advanced integration</p>
+                        <div class="product-footer">
+                            <span class="product-size">2.4 MB</span>
+                            <span class="product-price">$9.99</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 - Practice Problems -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Practice Problems Set 3</h3>
+                            <p class="product-code">MATH 101</p>
+                        </div>
+                        <span class="product-tag">Mathematics</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">50+ practice problems with solutions</p>
+                        <div class="product-footer">
+                            <span class="product-size">1.1 MB</span>
+                            <span class="product-price">$4.9</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 - Formula Sheet -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Formula Sheet</h3>
+                            <p class="product-code">MATH 101</p>
+                        </div>
+                        <span class="product-tag">Mathematics</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Complete reference of all formulas</p>
+                        <div class="product-footer">
+                            <span class="product-size">458 KB</span>
+                            <span class="product-price">$2.9</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 - Lecture Slides -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Lecture Slides - Week 10</h3>
+                            <p class="product-code">PHYS 201</p>
+                        </div>
+                        <span class="product-tag">Physics</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Complete lecture slides with diagrams</p>
+                        <div class="product-footer">
+                            <span class="product-size">5.2 MB</span>
+                            <span class="product-price">$12</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 - Lab Manual -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Lab Manual - Thermodynamics</h3>
+                            <p class="product-code">PHYS 201</p>
+                        </div>
+                        <span class="product-tag">Physics</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Detailed lab procedures and theory</p>
+                        <div class="product-footer">
+                            <span class="product-size">3.8 MB</span>
+                            <span class="product-price">$14</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 - Assignment Guidelines -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Assignment Guidelines</h3>
+                            <p class="product-code">PHYS 201</p>
+                        </div>
+                        <span class="product-tag">Physics</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Guidelines and rubrics for assignments</p>
+                        <div class="product-footer">
+                            <span class="product-size">645 KB</span>
+                            <span class="product-price">$3.9</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 - Lab Activity -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Lab Activity 4</h3>
+                            <p class="product-code">CHEM 150</p>
+                        </div>
+                        <span class="product-tag">Chemistry</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Detailed lab activity with procedures</p>
+                        <div class="product-footer">
+                            <span class="product-size">1.9 MB</span>
+                            <span class="product-price">$8.9</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 - Organic Chemistry Notes -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Organic Chemistry Notes</h3>
+                            <p class="product-code">CHEM 150</p>
+                        </div>
+                        <span class="product-tag">Chemistry</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Comprehensive organic chemistry guide</p>
+                        <div class="product-footer">
+                            <span class="product-size">2.7 MB</span>
+                            <span class="product-price">$11</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 9 - Periodic Table Reference -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Periodic Table Reference</h3>
+                            <p class="product-code">CHEM 150</p>
+                        </div>
+                        <span class="product-tag">Chemistry</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Interactive periodic table guide</p>
+                        <div class="product-footer">
+                            <span class="product-size">912 KB</span>
+                            <span class="product-price">$1.9</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 10 - Python Programming Guide -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Python Programming Guide</h3>
+                            <p class="product-code">CS 220</p>
+                        </div>
+                        <span class="product-tag">Computer Science</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Complete Python programming reference</p>
+                        <div class="product-footer">
+                            <span class="product-size">4.1 MB</span>
+                            <span class="product-price">$15</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 11 - Data Structures Lecture -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Data Structures Lecture</h3>
+                            <p class="product-code">CS 220</p>
+                        </div>
+                        <span class="product-tag">Computer Science</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Advanced data structures with examples</p>
+                        <div class="product-footer">
+                            <span class="product-size">3.2 MB</span>
+                            <span class="product-price">$13</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 12 - Project Requirements -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon-box">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="product-title-section">
+                            <h3 class="product-title">Project Requirements</h3>
+                            <p class="product-code">CS 220</p>
+                        </div>
+                        <span class="product-tag">Computer Science</span>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-description">Final project specifications</p>
+                        <div class="product-footer">
+                            <span class="product-size">782 KB</span>
+                            <span class="product-price">$4.9</span>
+                        </div>
+                        <button class="product-btn solid-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script>
+        // Close toast
+        function closeToast() {
+            const toast = document.getElementById('successToast');
+            if (toast) {
+                toast.style.display = 'none';
+            }
+        }
+
+        // Show toast with auto-hide
+        function showToast(title) {
+            const toast = document.getElementById('successToast');
+            const toastMessage = toast.querySelector('.toast-message');
+            toastMessage.innerHTML = `<strong>${title}</strong> added to cart`;
+            toast.style.display = 'flex';
+            toast.style.opacity = '1';
+
+            // Auto-hide after 5 seconds
+            clearTimeout(window.toastTimeout);
+            window.toastTimeout = setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 300);
+            }, 5000);
+        }
+
+        // Initialize initial toast timeout
+        setTimeout(() => {
+            const toast = document.getElementById('successToast');
+            if (toast && toast.style.display === 'flex') {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 300);
+            }
+        }, 5000);
+
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.solid-btn');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const card = button.closest('.product-card');
+                const title = card.querySelector('.product-title').textContent;
+
+                // Show toast notification
+                showToast(title);
+
+                // Update cart badge
+                const cartBadge = document.querySelector('.cart-badge');
+                const currentCount = parseInt(cartBadge.textContent);
+                cartBadge.textContent = currentCount + 1;
+
+                // Change button to "Go to Cart" with outline style
+                button.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> Go to Cart';
+                button.classList.remove('solid-btn');
+                button.classList.add('outline-btn');
+
+                // Replace button to remove old event listeners
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+
+                // Add click handler for cart navigation
+                newButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = 'cart.html';
+                });
+            });
+        });
+
+        // Handle outline buttons that are already in the HTML (like the first card)
+        document.addEventListener('DOMContentLoaded', function () {
+            const outlineButtons = document.querySelectorAll('.outline-btn');
+            outlineButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = 'cart.html';
+                });
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const productCards = document.querySelectorAll('.product-card');
+
+                productCards.forEach(card => {
+                    const title = card.querySelector('.product-title').textContent.toLowerCase();
+                    const tag = card.querySelector('.product-tag').textContent.toLowerCase();
+
+                    if (title.includes(searchTerm) || tag.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+    </script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

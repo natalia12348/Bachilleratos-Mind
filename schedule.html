@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item active has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <div class="schedule-container">
+                <!-- 1. Header -->
+                <div class="page-header">
+                    <div>
+                        <h1>Weekly Schedule</h1>
+                        <p class="text-muted">Your class timetable</p>
+                    </div>
+                    <span class="badge-blue"><i class="fa-regular fa-clock"></i> Week 10</span>
+                </div>
+
+                <!-- 2. Global Alert -->
+                <div class="alert-box">
+                    <div class="alert-icon">!</div>
+                    <div class="alert-text">
+                        <strong>You have 1 schedule change</strong>
+                        <span>Classes marked in red have been modified</span>
+                    </div>
+                </div>
+
+                <!-- Days Grid -->
+                <div class="schedule-days-grid">
+                    <!-- 3. Monday -->
+                    <div class="day-section">
+                        <span class="day-badge">Monday</span>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>08:00 - 09:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Mathematics</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Prof. Johnson</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 201</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>10:00 - 11:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Physics</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Dr. Smith</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lab 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>14:00 - 15:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Computer Science</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Dr. Brown</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 105</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Tuesday -->
+                    <div class="day-section">
+                        <span class="day-badge">Tuesday</span>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>08:00 - 10:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Chemistry</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Prof. Davis</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lab 2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>11:00 - 12:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">English Literature</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Ms. Wilson</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 302</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special "Danger" Card -->
+                        <div class="class-card danger">
+                            <div class="card-top">
+                                <div class="card-time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <div>
+                                        <span class="old-time">14:00 - 15:30</span>
+                                        <span class="new-time">17:00 - 18:30</span>
+                                    </div>
+                                </div>
+                                <div class="card-details">
+                                    <div class="subject">History</div>
+                                    <div class="prof">
+                                        <span><i class="fa-solid fa-user"></i> Prof. Martinez</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Room 204</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="warning-pill">
+                                <i class="fa-solid fa-exclamation-circle"></i> Class moved due to teacher availability
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Wednesday -->
+                    <div class="day-section">
+                        <span class="day-badge">Wednesday</span>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>08:00 - 09:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Biology</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Dr. Anderson</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lab 1</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>10:00 - 11:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Mathematics</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Prof. Johnson</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 201</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>13:00 - 14:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Economics</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Prof. Taylor</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 403</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Thursday -->
+                    <div class="day-section">
+                        <span class="day-badge">Thursday</span>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>08:00 - 10:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Physics</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Dr. Smith</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lab 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>11:00 - 12:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Computer Science</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Dr. Brown</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 105</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>14:00 - 15:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Chemistry</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Prof. Davis</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lab 2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Friday -->
+                    <div class="day-section">
+                        <span class="day-badge">Friday</span>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>08:00 - 09:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">English Literature</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Ms. Wilson</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Room 302</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="card-time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>10:00 - 11:30</span>
+                            </div>
+                            <div class="card-details">
+                                <div class="subject">Biology</div>
+                                <div class="prof">
+                                    <span><i class="fa-solid fa-user"></i> Dr. Anderson</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Lab 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Days Grid -->
+                </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

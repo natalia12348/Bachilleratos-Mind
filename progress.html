@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Progress - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <div class="progress-container">
+                <!-- Header -->
+                <div class="page-header">
+                    <div>
+                        <h1>Academic Progress</h1>
+                        <p class="page-subtitle">Track your learning journey</p>
+                    </div>
+                    <button class="btn-icon-blue"><i class="fa-solid fa-chart-line"></i></button>
+                </div>
+
+                <!-- ROW 1: Top Charts (2 Columns) -->
+                <div class="charts-row-top">
+                    <!-- Chart 1: Overall Trend -->
+                    <div class="chart-card">
+                        <h3><i class="fa-solid fa-chart-line"></i> Overall Performance Trend</h3>
+                        <div class="chart-wrapper">
+                            <!-- Line Chart SVG -->
+                            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                                <defs>
+                                    <linearGradient id="lineGradient" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#2563EB" stop-opacity="0.3" />
+                                        <stop offset="100%" stop-color="#2563EB" stop-opacity="0.02" />
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- Grid Lines -->
+                                <g stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4">
+                                    <line x1="40" y1="20" x2="380" y2="20" />
+                                    <line x1="40" y1="60" x2="380" y2="60" />
+                                    <line x1="40" y1="100" x2="380" y2="100" />
+                                    <line x1="40" y1="140" x2="380" y2="140" />
+                                    <line x1="40" y1="180" x2="380" y2="180" />
+                                </g>
+
+                                <!-- Y-axis labels -->
+                                <g fill="#9CA3AF" font-family="Poppins, sans-serif" font-size="10" text-anchor="end">
+                                    <text x="35" y="24">100%</text>
+                                    <text x="35" y="64">75%</text>
+                                    <text x="35" y="104">50%</text>
+                                    <text x="35" y="144">25%</text>
+                                    <text x="35" y="184">0%</text>
+                                </g>
+
+                                <!-- Area fill -->
+                                <path
+                                    d="M 50,120 C 80,115 100,100 130,90 C 160,80 190,70 220,65 C 250,60 280,55 310,50 C 340,48 360,45 370,42 L 370,180 L 50,180 Z"
+                                    fill="url(#lineGradient)" stroke="none" />
+
+                                <!-- Line -->
+                                <path
+                                    d="M 50,120 C 80,115 100,100 130,90 C 160,80 190,70 220,65 C 250,60 280,55 310,50 C 340,48 360,45 370,42"
+                                    stroke="#2563EB" stroke-width="3" fill="none" stroke-linecap="round" />
+
+                                <!-- X-axis labels -->
+                                <g fill="#9CA3AF" font-family="Poppins, sans-serif" font-size="10" text-anchor="middle">
+                                    <text x="70" y="195">Sep</text>
+                                    <text x="130" y="195">Oct</text>
+                                    <text x="190" y="195">Nov</text>
+                                    <text x="250" y="195">Dec</text>
+                                    <text x="310" y="195">Jan</text>
+                                    <text x="370" y="195">Feb</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: Subject Performance -->
+                    <div class="chart-card">
+                        <h3><i class="fa-solid fa-chart-bar"></i> Subject Performance</h3>
+                        <div class="chart-wrapper">
+                            <!-- Bar Chart SVG -->
+                            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                                <!-- Grid Lines -->
+                                <g stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4">
+                                    <line x1="40" y1="20" x2="380" y2="20" />
+                                    <line x1="40" y1="60" x2="380" y2="60" />
+                                    <line x1="40" y1="100" x2="380" y2="100" />
+                                    <line x1="40" y1="140" x2="380" y2="140" />
+                                    <line x1="40" y1="180" x2="380" y2="180" />
+                                </g>
+
+                                <!-- Y-axis labels -->
+                                <g fill="#9CA3AF" font-family="Poppins, sans-serif" font-size="10" text-anchor="end">
+                                    <text x="35" y="24">100</text>
+                                    <text x="35" y="64">75</text>
+                                    <text x="35" y="104">50</text>
+                                    <text x="35" y="144">25</text>
+                                    <text x="35" y="184">0</text>
+                                </g>
+
+                                <!-- Bars with rounded tops -->
+                                <g>
+                                    <rect x="55" y="30" width="30" height="150" rx="4" ry="4" fill="#2563EB" />
+                                    <rect x="100" y="45" width="30" height="135" rx="4" ry="4" fill="#2563EB" />
+                                    <rect x="145" y="55" width="30" height="125" rx="4" ry="4" fill="#2563EB" />
+                                    <rect x="190" y="60" width="30" height="120" rx="4" ry="4" fill="#2563EB" />
+                                    <rect x="235" y="40" width="30" height="140" rx="4" ry="4" fill="#2563EB" />
+                                    <rect x="280" y="50" width="30" height="130" rx="4" ry="4" fill="#2563EB" />
+                                    <rect x="325" y="65" width="30" height="115" rx="4" ry="4" fill="#2563EB" />
+                                </g>
+
+                                <!-- X-axis labels -->
+                                <g fill="#9CA3AF" font-family="Poppins, sans-serif" font-size="9" text-anchor="middle">
+                                    <text x="70" y="195">Math</text>
+                                    <text x="115" y="195">Chem</text>
+                                    <text x="160" y="195">CS</text>
+                                    <text x="205" y="195">Eng</text>
+                                    <text x="250" y="195">Bio</text>
+                                    <text x="295" y="195">Hist</text>
+                                    <text x="340" y="195">Econ</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Middle Chart (Full Width) -->
+                <div class="charts-row-middle">
+                    <div class="chart-card wide">
+                        <h3><i class="fa-regular fa-clock"></i> Weekly Study Hours</h3>
+                        <div class="chart-wrapper">
+                            <!-- Curved Line Chart with Dots SVG -->
+                            <svg viewBox="0 0 700 220" preserveAspectRatio="xMidYMid meet">
+                                <!-- Grid Lines -->
+                                <g stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4">
+                                    <line x1="50" y1="20" x2="680" y2="20" />
+                                    <line x1="50" y1="60" x2="680" y2="60" />
+                                    <line x1="50" y1="100" x2="680" y2="100" />
+                                    <line x1="50" y1="140" x2="680" y2="140" />
+                                    <line x1="50" y1="180" x2="680" y2="180" />
+                                </g>
+
+                                <!-- Y-axis labels -->
+                                <g fill="#9CA3AF" font-family="Poppins, sans-serif" font-size="11" text-anchor="end">
+                                    <text x="40" y="25">24hr</text>
+                                    <text x="40" y="65">18hr</text>
+                                    <text x="40" y="105">12hr</text>
+                                    <text x="40" y="145">6hr</text>
+                                    <text x="40" y="185">0hr</text>
+                                </g>
+
+                                <!-- Area fill -->
+                                <defs>
+                                    <linearGradient id="studyGradient" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#2563EB" stop-opacity="0.2" />
+                                        <stop offset="100%" stop-color="#2563EB" stop-opacity="0.02" />
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M 80,100 C 110,95 130,85 160,75 C 190,85 210,90 240,95 C 270,80 290,65 320,55 C 350,70 370,80 400,85 C 430,70 450,55 480,50 C 510,55 530,60 560,55 C 590,45 610,35 640,30 L 640,180 L 80,180 Z"
+                                    fill="url(#studyGradient)" stroke="none" />
+
+                                <!-- Curved line -->
+                                <path
+                                    d="M 80,100 C 110,95 130,85 160,75 C 190,85 210,90 240,95 C 270,80 290,65 320,55 C 350,70 370,80 400,85 C 430,70 450,55 480,50 C 510,55 530,60 560,55 C 590,45 610,35 640,30"
+                                    stroke="#2563EB" stroke-width="3" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+
+                                <!-- Data points (circles) -->
+                                <g fill="#ffffff" stroke="#2563EB" stroke-width="3">
+                                    <circle cx="80" cy="100" r="6" />
+                                    <circle cx="160" cy="75" r="6" />
+                                    <circle cx="240" cy="95" r="6" />
+                                    <circle cx="320" cy="55" r="6" />
+                                    <circle cx="400" cy="85" r="6" />
+                                    <circle cx="480" cy="50" r="6" />
+                                    <circle cx="560" cy="55" r="6" />
+                                    <circle cx="640" cy="30" r="6" />
+                                </g>
+
+                                <!-- X-axis labels -->
+                                <g fill="#9CA3AF" font-family="Poppins, sans-serif" font-size="11" text-anchor="middle">
+                                    <text x="80" y="200">Week 1</text>
+                                    <text x="160" y="200">Week 2</text>
+                                    <text x="240" y="200">Week 3</text>
+                                    <text x="320" y="200">Week 4</text>
+                                    <text x="400" y="200">Week 5</text>
+                                    <text x="480" y="200">Week 6</text>
+                                    <text x="560" y="200">Week 7</text>
+                                    <text x="640" y="200">Week 8</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: Stats Cards (4 Columns) -->
+                <div class="stats-grid">
+                    <div class="stat-card blue-1">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Current GPA</span>
+                        <div class="stat-value">3.85</div>
+                    </div>
+                    <div class="stat-card blue-2">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Classes Passed</span>
+                        <div class="stat-value">24</div>
+                    </div>
+                    <div class="stat-card blue-3">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Total Study Hours</span>
+                        <div class="stat-value">146</div>
+                    </div>
+                    <div class="stat-card blue-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Attendance Rate</span>
+                        <div class="stat-value">96%</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

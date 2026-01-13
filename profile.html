@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="profile-content">
+            <!-- SECTION A: Page Header -->
+            <div class="profile-page-header">
+                <button class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="page-title-section">
+                    <h1 class="page-title">Profile</h1>
+                    <p class="page-subtitle">View and manage your information</p>
+                </div>
+            </div>
+
+            <!-- SECTION B: Profile Banner -->
+            <div class="profile-banner">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar-circle">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="profile-banner-info">
+                    <h2 class="profile-name">Adam Czajkowski</h2>
+                    <p class="profile-role">Student</p>
+                    <p class="profile-details">2nd Year High School • Bachillerato</p>
+                </div>
+            </div>
+
+            <!-- SECTION C: Info Grid -->
+            <div class="profile-info-grid">
+                <!-- Contact Information Card -->
+                <div class="profile-info-card">
+                    <div class="info-card-header">
+                        <i class="fa-regular fa-address-card"></i>
+                        <h3>Contact Information</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <div class="info-row">
+                            <div class="info-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">adam.czajkowski@student.edu</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+48 123 456 789</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Address</span>
+                                <span class="info-value">Warsaw, Poland</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Information Card -->
+                <div class="profile-info-card">
+                    <div class="info-card-header">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Academic Information</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <div class="info-row">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Student ID</span>
+                                <span class="info-value">2024-HS-00142</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Enrollment Date</span>
+                                <span class="info-value">September 2023</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Expected Graduation</span>
+                                <span class="info-value">June 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION D: Current Courses -->
+            <div class="profile-courses-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-book"></i>
+                    <h3>Current Courses</h3>
+                </div>
+                <div class="profile-courses-grid">
+                    <!-- Course Card 1 -->
+                    <div class="profile-course-card">
+                        <h4 class="profile-course-name">Mathematics</h4>
+                        <p class="profile-course-code">MATH-251</p>
+                        <div class="course-grade-row">
+                            <span class="grade-label">Current Grade</span>
+                            <span class="grade-value">8.5</span>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="profile-course-card">
+                        <h4 class="profile-course-name">Physics</h4>
+                        <p class="profile-course-code">PHYS-201</p>
+                        <div class="course-grade-row">
+                            <span class="grade-label">Current Grade</span>
+                            <span class="grade-value">9.0</span>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="profile-course-card">
+                        <h4 class="profile-course-name">Chemistry</h4>
+                        <p class="profile-course-code">CHEM-301</p>
+                        <div class="course-grade-row">
+                            <span class="grade-label">Current Grade</span>
+                            <span class="grade-value">8.2</span>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 4 -->
+                    <div class="profile-course-card">
+                        <h4 class="profile-course-name">English Literature</h4>
+                        <p class="profile-course-code">ENGL-201</p>
+                        <div class="course-grade-row">
+                            <span class="grade-label">Current Grade</span>
+                            <span class="grade-value">8.0</span>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 5 -->
+                    <div class="profile-course-card">
+                        <h4 class="profile-course-name">History</h4>
+                        <p class="profile-course-code">HIST-301</p>
+                        <div class="course-grade-row">
+                            <span class="grade-label">Current Grade</span>
+                            <span class="grade-value">9.2</span>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 6 -->
+                    <div class="profile-course-card">
+                        <h4 class="profile-course-name">Computer Science</h4>
+                        <p class="profile-course-code">CS-301</p>
+                        <div class="course-grade-row">
+                            <span class="grade-label">Current Grade</span>
+                            <span class="grade-value">9.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION E: Bottom Stats -->
+            <div class="profile-stats-grid">
+                <!-- GPA Card -->
+                <div class="profile-stat-card">
+                    <span class="stat-label">GPA</span>
+                    <span class="stat-value stat-blue">8.87</span>
+                </div>
+
+                <!-- Attendance Card -->
+                <div class="profile-stat-card">
+                    <span class="stat-label">Attendance</span>
+                    <span class="stat-value stat-green">96%</span>
+                </div>
+
+                <!-- Credits Card -->
+                <div class="profile-stat-card">
+                    <span class="stat-label">Credits</span>
+                    <span class="stat-value stat-orange">42</span>
+                </div>
+
+                <!-- Rank Card -->
+                <div class="profile-stat-card">
+                    <span class="stat-label">Rank</span>
+                    <span class="stat-value stat-purple">12th</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script>
+        // Back button functionality
+        document.querySelector('.back-btn').addEventListener('click', function () {
+            window.history.back();
+        });
+    </script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

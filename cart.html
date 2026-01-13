@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item active">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="cart-content">
+            <div class="cart-container">
+                <!-- Left Column - Cart Items -->
+                <div class="cart-left">
+                    <!-- Cart Header -->
+                    <div class="cart-header">
+                        <div class="cart-header-left">
+                            <h1 class="page-title">Shopping Cart</h1>
+                            <p class="cart-subtitle">2 items in your cart</p>
+                        </div>
+                        <button class="continue-shopping-btn">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Continue Shopping
+                        </button>
+                    </div>
+
+                    <!-- Cart Items List -->
+                    <div class="cart-items-list">
+                        <!-- Cart Item 1 -->
+                        <div class="cart-item">
+                            <div class="cart-item-icon">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+                            <div class="cart-item-details">
+                                <h3 class="cart-item-title">Calculus Chapter 5 Notes</h3>
+                                <div class="cart-item-meta">
+                                    <span class="cart-item-course">MATH 101</span>
+                                    <span class="cart-item-separator">•</span>
+                                    <span class="cart-item-category">Mathematics</span>
+                                </div>
+                                <p class="cart-item-description">Comprehensive notes covering advanced integration</p>
+                                <span class="cart-item-size">2.4 MB</span>
+                            </div>
+                            <div class="cart-item-right">
+                                <span class="cart-item-price">$9.99</span>
+                                <button class="cart-item-remove" onclick="removeItem(this)">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 2 -->
+                        <div class="cart-item">
+                            <div class="cart-item-icon">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+                            <div class="cart-item-details">
+                                <h3 class="cart-item-title">Practice Problems Set 3</h3>
+                                <div class="cart-item-meta">
+                                    <span class="cart-item-course">MATH 101</span>
+                                    <span class="cart-item-separator">•</span>
+                                    <span class="cart-item-category">Mathematics</span>
+                                </div>
+                                <p class="cart-item-description">50+ practice problems with solutions</p>
+                                <span class="cart-item-size">1.1 MB</span>
+                            </div>
+                            <div class="cart-item-right">
+                                <span class="cart-item-price">$4.99</span>
+                                <button class="cart-item-remove" onclick="removeItem(this)">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Order Summary -->
+                <div class="cart-right">
+                    <div class="order-summary">
+                        <h2 class="order-summary-title">Order Summary</h2>
+
+                        <div class="order-summary-rows">
+                            <div class="order-summary-row">
+                                <span class="order-summary-label">Items (2)</span>
+                                <span class="order-summary-value">$14.98</span>
+                            </div>
+                            <div class="order-summary-row">
+                                <span class="order-summary-label">Processing Fee</span>
+                                <span class="order-summary-value">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="order-summary-total">
+                            <span class="order-summary-total-label">Total</span>
+                            <span class="order-summary-total-value">$14.98</span>
+                        </div>
+
+                        <button class="complete-purchase-btn">
+                            <i class="fa-solid fa-check"></i>
+                            Complete Purchase
+                        </button>
+
+                        <button class="add-more-items-btn" onclick="window.location.href='store.html'">
+                            Add More Items
+                        </button>
+
+                        <div class="order-info-box">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p class="order-info-text">All materials will be instantly available in your Materials
+                                library after purchase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script>
+        // Remove item from cart
+        function removeItem(button) {
+            const cartItem = button.closest('.cart-item');
+            cartItem.style.opacity = '0';
+            cartItem.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                cartItem.remove();
+                updateCartTotal();
+            }, 300);
+        }
+
+        // Update cart total
+        function updateCartTotal() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            const itemCount = cartItems.length;
+            const cartSubtitle = document.querySelector('.cart-subtitle');
+
+            if (cartSubtitle) {
+                if (itemCount === 0) {
+                    cartSubtitle.textContent = 'Your cart is empty';
+                } else if (itemCount === 1) {
+                    cartSubtitle.textContent = '1 item in your cart';
+                } else {
+                    cartSubtitle.textContent = `${itemCount} items in your cart`;
+                }
+            }
+
+            // Calculate total
+            let total = 0;
+            cartItems.forEach(item => {
+                const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('$', ''));
+                total += price;
+            });
+
+            // Update total in order summary
+            const itemsRow = document.querySelector('.order-summary-row .order-summary-value');
+            const totalValue = document.querySelector('.order-summary-total-value');
+
+            if (itemsRow) {
+                itemsRow.textContent = '$' + total.toFixed(2);
+            }
+            if (totalValue) {
+                totalValue.textContent = '$' + total.toFixed(2);
+            }
+        }
+
+        // Continue shopping button
+        const continueShoppingBtn = document.querySelector('.continue-shopping-btn');
+        if (continueShoppingBtn) {
+            continueShoppingBtn.addEventListener('click', () => {
+                window.location.href = 'store.html';
+            });
+        }
+    </script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

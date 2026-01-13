@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Materials - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item active">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="materials-content">
+            <div class="materials-header">
+                <div class="materials-header-left">
+                    <h1 class="page-title">My Materials</h1>
+                    <p class="materials-subtitle">2 items in your library</p>
+                </div>
+                <button class="browse-store-btn" onclick="window.location.href='store.html'">
+                    <i class="fa-solid fa-store"></i>
+                    Browse Store
+                </button>
+            </div>
+
+            <div class="materials-container">
+                <!-- Mathematics Section -->
+                <div class="materials-section">
+                    <div class="materials-section-header">
+                        <h2 class="materials-section-title">Mathematics</h2>
+                    </div>
+
+                    <div class="materials-list">
+                        <!-- Material Item 1 -->
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <div class="material-info">
+                                    <p class="material-name">Calculus Chapter 5 Notes</p>
+                                    <p class="material-size">2.4 MB</p>
+                                </div>
+                            </div>
+                            <div class="material-right">
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Material Item 2 -->
+                        <div class="material-item">
+                            <div class="material-left">
+                                <div class="material-icon">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <div class="material-info">
+                                    <p class="material-name">Practice Problems Set 3</p>
+                                    <p class="material-size">1.1 MB</p>
+                                </div>
+                            </div>
+                            <div class="material-right">
+                                <button class="material-download">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+    if (notificationCount) {
+    notificationCount.textContent = '0 unread';
+    }
+    const notificationBadge = document.querySelector('.notification-badge');
+    if (notificationBadge) {
+    notificationBadge.style.display = 'none';
+    }
+    });
+    }
+
+    // Download functionality
+    const downloadButtons = document.querySelectorAll('.material-download');
+    downloadButtons.forEach(button => {
+    button.addEventListener('click', () => {
+    const materialItem = button.closest('.material-item');
+    const materialName = materialItem.querySelector('.material-name').textContent;
+
+    // Show a download notification
+    alert(`Downloading: ${materialName}`);
+
+    // In a real application, this would trigger an actual file download
+    // For demo purposes, we're just showing an alert
+    });
+    });
+    </script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

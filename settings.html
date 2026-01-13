@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item active">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="settings-header">
+                <button class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="header-text">
+                    <h1 class="settings-title">Settings</h1>
+                    <p class="settings-subtitle">Manage your preferences</p>
+                </div>
+            </div>
+
+            <!-- Settings Cards -->
+            <div class="settings-container">
+                <!-- Card 1: Notifications -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-bell card-icon"></i>
+                        <h2 class="card-title">Notifications</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <h4 class="setting-label">Push Notifications</h4>
+                                <p class="setting-description">Receive notifications about grades, messages, and updates
+                                </p>
+                            </div>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="push-notifications" checked>
+                                <label for="push-notifications" class="toggle-label"></label>
+                            </div>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <h4 class="setting-label">Email Notifications</h4>
+                                <p class="setting-description">Get reminded via email</p>
+                            </div>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="email-notifications" checked>
+                                <label for="email-notifications" class="toggle-label"></label>
+                            </div>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <h4 class="setting-label">Sound Effects</h4>
+                                <p class="setting-description">Play sounds for notifications and actions</p>
+                            </div>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="sound-effects" checked>
+                                <label for="sound-effects" class="toggle-label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Appearance -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-palette card-icon"></i>
+                        <h2 class="card-title">Appearance</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <h4 class="setting-label">Dark Mode</h4>
+                                <p class="setting-description">Switch to dark theme</p>
+                            </div>
+                            <div class="theme-toggle">
+                                <i class="fa-solid fa-sun theme-icon"></i>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="dark-mode">
+                                    <label for="dark-mode" class="toggle-label"></label>
+                                </div>
+                                <i class="fa-solid fa-moon theme-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Language & Region -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-globe card-icon"></i>
+                        <h2 class="card-title">Language & Region</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <h4 class="setting-label">Language</h4>
+                                <p class="setting-description">Select your preferred language</p>
+                            </div>
+                            <select class="settings-select">
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                            </select>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <h4 class="setting-label">Time Zone</h4>
+                                <p class="setting-description">Your current time zone</p>
+                            </div>
+                            <span class="timezone-text">Central European Time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Privacy & Security -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-lock card-icon"></i>
+                        <h2 class="card-title">Privacy & Security</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="security-actions">
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4 class="security-label">Change Password</h4>
+                                    <p class="security-description">Update your account password</p>
+                                </div>
+                                <button class="security-btn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4 class="security-label">Two-Factor Authentication</h4>
+                                    <p class="security-description">Add an extra layer of security</p>
+                                </div>
+                                <button class="security-btn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4 class="security-label">Privacy Settings</h4>
+                                    <p class="security-description">Control data and profile information</p>
+                                </div>
+                                <button class="security-btn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Changes Button -->
+                <button class="save-changes-btn">Save Changes</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script>
+        // Settings page functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const backBtn = document.querySelector('.back-btn');
+            const saveBtn = document.querySelector('.save-changes-btn');
+
+            // Back button functionality
+            backBtn.addEventListener('click', function () {
+                window.history.back();
+            });
+
+            // Save changes functionality
+            saveBtn.addEventListener('click', function () {
+                // Show a simple alert for now - in a real app this would save to backend
+                alert('Settings saved successfully!');
+            });
+        });
+    </script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

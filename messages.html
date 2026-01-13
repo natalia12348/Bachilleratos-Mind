@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item active">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-content messages-page">
+            <div class="messages-card">
+                <!-- Contacts Column -->
+                <section class="contacts-panel">
+                    <div class="contacts-header">
+                        <h2>Messages</h2>
+                    </div>
+                    <div class="contact-list">
+                        <article class="contact-card active" data-contact-id="johnson">
+                            <img src="img/avatar-message1.png" alt="Prof. Johnson" class="contact-avatar" />
+                            <div class="contact-info">
+                                <div class="contact-top-row">
+                                    <span class="contact-name">Prof. Johnson</span>
+                                    <span class="contact-time">10:30 AM</span>
+                                </div>
+                                <div class="contact-bottom-row">
+                                    <span class="contact-subject">Mathematics</span>
+                                    <span class="contact-preview">Your assignment has been</span>
+                                </div>
+                            </div>
+                            <span class="contact-indicator"></span>
+                        </article>
+
+                        <article class="contact-card" data-contact-id="smith">
+                            <img src="img/avatar-message2.png" alt="Dr. Smith" class="contact-avatar" />
+                            <div class="contact-info">
+                                <div class="contact-top-row">
+                                    <span class="contact-name">Dr. Smith</span>
+                                    <span class="contact-time">Yesterday</span>
+                                </div>
+                                <div class="contact-bottom-row">
+                                    <span class="contact-subject">Physics</span>
+                                    <span class="contact-preview">Lab report feedback attached</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="contact-card" data-contact-id="wilson">
+                            <img src="img/avatar-message3.png" alt="Ms. Wilson" class="contact-avatar" />
+                            <div class="contact-info">
+                                <div class="contact-top-row">
+                                    <span class="contact-name">Ms. Wilson</span>
+                                    <span class="contact-time">2 days ago</span>
+                                </div>
+                                <div class="contact-bottom-row">
+                                    <span class="contact-subject">English Literature</span>
+                                    <span class="contact-preview">Great work on your essay!</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="contact-card" data-contact-id="davis">
+                            <img src="img/avatar-message4.png" alt="Prof. Davis" class="contact-avatar" />
+                            <div class="contact-info">
+                                <div class="contact-top-row">
+                                    <span class="contact-name">Prof. Davis</span>
+                                    <span class="contact-time">3 days ago</span>
+                                </div>
+                                <div class="contact-bottom-row">
+                                    <span class="contact-subject">Chemistry</span>
+                                    <span class="contact-preview">Office hours changed to 3 PM</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Chat Column -->
+                <section class="chat-panel">
+                    <header class="chat-header">
+                        <div class="chat-recipient">
+                            <h3>Prof. Johnson</h3>
+                            <span>Mathematics</span>
+                        </div>
+                    </header>
+
+                    <div class="chat-messages" aria-live="polite">
+
+                    </div>
+
+                    <div class="chat-input">
+                        <button class="attach-btn" aria-label="Attach file">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </button>
+                        <input type="text" placeholder="Type a message..." aria-label="Type a message" />
+                        <button class="send-btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            Send
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script>
+        // Messages functionality
+        const chatMessages = document.querySelector('.chat-messages');
+        const chatInput = document.querySelector('.chat-input input');
+        const sendBtn = document.querySelector('.send-btn');
+        const attachBtn = document.querySelector('.attach-btn');
+        const chatRecipientName = document.querySelector('.chat-recipient h3');
+        const chatRecipientSubject = document.querySelector('.chat-recipient span');
+        const contacts = document.querySelectorAll('.contact-card');
+
+        const conversations = {
+            johnson: {
+                name: 'Prof. Johnson',
+                subject: 'Mathematics',
+                messages: [
+                    { direction: 'incoming', text: "Hi Adam, I've reviewed your latest assignment.", time: '10:25 AM' },
+                    { direction: 'incoming', text: 'Your calculus work was excellent. You scored 92%.', time: '10:26 AM' },
+                    { direction: 'outgoing', text: 'Thank you, Professor! I really enjoyed those problems.', time: '10:28 AM' },
+                    { direction: 'incoming', text: 'Your assignment has been graded. Keep up the good work!', time: '10:30 AM' }
+                ]
+            },
+            smith: {
+                name: 'Dr. Smith',
+                subject: 'Physics',
+                messages: [
+                    { direction: 'incoming', text: 'Adam, please check the lab report feedback I sent.', time: 'Yesterday' },
+                    { direction: 'outgoing', text: 'Got it, I will update the data table and resubmit.', time: 'Yesterday' },
+                    { direction: 'incoming', text: 'Perfect. Also, prep questions for Friday’s session.', time: 'Yesterday' }
+                ]
+            },
+            wilson: {
+                name: 'Ms. Wilson',
+                subject: 'English Literature',
+                messages: [
+                    { direction: 'incoming', text: 'Loved your take on symbolism in chapter 3.', time: '2 days ago' },
+                    { direction: 'incoming', text: 'Could you expand the conclusion by two paragraphs?', time: '2 days ago' },
+                    { direction: 'outgoing', text: 'Sure thing, I will refine the conclusion tonight.', time: '2 days ago' }
+                ]
+            },
+            davis: {
+                name: 'Prof. Davis',
+                subject: 'Chemistry',
+                messages: [
+                    { direction: 'incoming', text: 'Reminder: Office hours moved to 3 PM this week.', time: '3 days ago' },
+                    { direction: 'incoming', text: 'Bring your titration notes for a quick review.', time: '3 days ago' },
+                    { direction: 'outgoing', text: 'Thanks for the heads-up. See you then!', time: '3 days ago' }
+                ]
+            }
+        };
+
+        let activeContactId = 'johnson';
+
+        function formatTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            return `${hours}:${minutes}`;
+        }
+
+        function createMessageBubble(direction, text, time) {
+            const messageRow = document.createElement('div');
+            messageRow.className = `message-row ${direction === 'outgoing' ? 'outgoing' : 'incoming'}`;
+
+            const messageBubble = document.createElement('div');
+            messageBubble.className = 'message-bubble';
+
+            const messageText = document.createElement('p');
+            messageText.textContent = text;
+
+            const messageTime = document.createElement('span');
+            messageTime.className = 'message-time';
+            messageTime.textContent = time;
+
+            messageBubble.appendChild(messageText);
+            messageBubble.appendChild(messageTime);
+            messageRow.appendChild(messageBubble);
+
+            return messageRow;
+        }
+
+        function renderConversation(contactId) {
+            const conversation = conversations[contactId];
+            if (!conversation) return;
+
+            chatRecipientName.textContent = conversation.name;
+            chatRecipientSubject.textContent = conversation.subject;
+            chatMessages.innerHTML = '';
+
+            conversation.messages.forEach(({ direction, text, time }) => {
+                chatMessages.appendChild(createMessageBubble(direction, text, time));
+            });
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function setActiveContact(contactId) {
+            activeContactId = contactId;
+            contacts.forEach((card) => {
+                const isActive = card.dataset.contactId === contactId;
+                card.classList.toggle('active', isActive);
+            });
+            renderConversation(contactId);
+        }
+
+        function updateContactPreview(contactId, text) {
+            const card = document.querySelector(`.contact-card[data-contact-id="${contactId}"] .contact-preview`);
+            if (card) {
+                card.textContent = text;
+            }
+        }
+
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            const time = formatTime();
+            const conversation = conversations[activeContactId];
+            conversation.messages.push({ direction: 'outgoing', text: message, time });
+
+            chatMessages.appendChild(createMessageBubble('outgoing', message, time));
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            chatInput.value = '';
+
+            updateContactPreview(activeContactId, message);
+        }
+
+        contacts.forEach((card) => {
+            card.addEventListener('click', () => {
+                const contactId = card.dataset.contactId;
+                setActiveContact(contactId);
+            });
+        });
+
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        attachBtn.addEventListener('click', () => {
+            alert('Attachment functionality coming soon!');
+        });
+
+        setActiveContact(activeContactId);
+    </script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

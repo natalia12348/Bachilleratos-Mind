@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Courses - Bachillerato's Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <span class="nav-label">DASHBOARD</span>
+                <a href="index.html" class="nav-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>THIS WEEK</span>
+                </a>
+                <a href="schedule.html" class="nav-item has-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Schedule</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="courses.html" class="nav-item active">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Materials</span>
+                </a>
+                <a href="store.html" class="nav-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Store</span>
+                </a>
+                <a href="grades.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="progress.html" class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Messages</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="login.html" class="nav-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>LOG OUT</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="topbar-end">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
+                    <span class="user-name">Adam Czajkowski</span>
+                    <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="courses-content">
+            <div class="courses-header">
+                <h1 class="page-title">My Courses</h1>
+                <p class="page-subtitle">Track your learning journey</p>
+            </div>
+
+            <div class="courses-container">
+                <!-- Mathematics Course Card -->
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <div class="course-header-top">
+                            <div class="course-icon-title">
+                                <i class="fa-solid fa-book"></i>
+                                <div>
+                                    <h3 class="courses-card-title">Mathematics</h3>
+                                    <p class="courses-card-code">MATH 101</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="courses-card-description">Advanced calculus and mathematical analysis covering
+                            differential
+                            equations, integration techniques, and complex mathematical modeling.</p>
+                    </div>
+
+                    <div class="course-instructor">
+                        <div class="instructor-info">
+                            <p class="instructor-label">Instructor</p>
+                            <p class="instructor-name">Prof. Johnson</p>
+                            <p class="instructor-email">johnson@university.edu</p>
+                        </div>
+                        <button class="contact-teacher-btn">
+                            <i class="fa-regular fa-envelope"></i>
+                            Contact Teacher
+                        </button>
+                    </div>
+
+                    <div class="course-materials">
+                        <h4 class="course-materials-title">Course Materials</h4>
+                        <div class="course-materials-list">
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Calculus Chapter 5 Notes</p>
+                                    <p class="course-material-desc">Comprehensive notes covering advanced integration
+                                    </p>
+                                    <p class="course-material-size">2.4 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$9.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Practice Problems Set 3</p>
+                                    <p class="course-material-desc">50+ practice problems with detailed solutions</p>
+                                    <p class="course-material-size">1.1 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$4.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Formula Sheet</p>
+                                    <p class="course-material-desc">Complete reference of all formulas</p>
+                                    <p class="course-material-size">458 KB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$2.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Physics Course Card -->
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <div class="course-header-top">
+                            <div class="course-icon-title">
+                                <i class="fa-solid fa-book"></i>
+                                <div>
+                                    <h3 class="courses-card-title">Physics</h3>
+                                    <p class="courses-card-code">PHYS 201</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="courses-card-description">Classical and modern physics including thermodynamics,
+                            electromagnetism, quantum mechanics, and relativistic physics.</p>
+                    </div>
+
+                    <div class="course-instructor">
+                        <div class="instructor-info">
+                            <p class="instructor-label">Instructor</p>
+                            <p class="instructor-name">Dr. Smith</p>
+                            <p class="instructor-email">smith@university.edu</p>
+                        </div>
+                        <button class="contact-teacher-btn">
+                            <i class="fa-regular fa-envelope"></i>
+                            Contact Teacher
+                        </button>
+                    </div>
+
+                    <div class="course-materials">
+                        <h4 class="course-materials-title">Course Materials</h4>
+                        <div class="course-materials-list">
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Lecture Slides - Week 10</p>
+                                    <p class="course-material-desc">Complete lecture slides with diagrams</p>
+                                    <p class="course-material-size">5.2 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$12.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Lab Manual - Thermodynamics</p>
+                                    <p class="course-material-desc">Detailed lab procedures and theory</p>
+                                    <p class="course-material-size">3.8 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$14.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Assignment Guidelines</p>
+                                    <p class="course-material-desc">Guidelines and rubrics for assignments</p>
+                                    <p class="course-material-size">645 KB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$3.9</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chemistry Course Card -->
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <div class="course-header-top">
+                            <div class="course-icon-title">
+                                <i class="fa-solid fa-book"></i>
+                                <div>
+                                    <h3 class="courses-card-title">Chemistry</h3>
+                                    <p class="courses-card-code">CHEM 150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="courses-card-description">Organic and inorganic chemistry covering molecular
+                            structures,
+                            chemical reactions, and laboratory techniques.</p>
+                    </div>
+
+                    <div class="course-instructor">
+                        <div class="instructor-info">
+                            <p class="instructor-label">Instructor</p>
+                            <p class="instructor-name">Prof. Davis</p>
+                            <p class="instructor-email">davis@university.edu</p>
+                        </div>
+                        <button class="contact-teacher-btn">
+                            <i class="fa-regular fa-envelope"></i>
+                            Contact Teacher
+                        </button>
+                    </div>
+
+                    <div class="course-materials">
+                        <h4 class="course-materials-title">Course Materials</h4>
+                        <div class="course-materials-list">
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Lab Activity 4</p>
+                                    <p class="course-material-desc">Detailed lab activity with procedures</p>
+                                    <p class="course-material-size">1.6 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$8.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Organic Chemistry Notes</p>
+                                    <p class="course-material-desc">Comprehensive organic chemistry notes</p>
+                                    <p class="course-material-size">7.7 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$11.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Periodic Table Reference</p>
+                                    <p class="course-material-desc">Interactive periodic table guide</p>
+                                    <p class="course-material-size">413 KB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$1.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Science Course Card -->
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <div class="course-header-top">
+                            <div class="course-icon-title">
+                                <i class="fa-solid fa-book"></i>
+                                <div>
+                                    <h3 class="courses-card-title">Computer Science</h3>
+                                    <p class="courses-card-code">CS 220</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="courses-card-description">Data structures and algorithms including trees, graphs,
+                            sorting
+                            algorithms, and complexity analysis.</p>
+                    </div>
+
+                    <div class="course-instructor">
+                        <div class="instructor-info">
+                            <p class="instructor-label">Instructor</p>
+                            <p class="instructor-name">Dr. Brown</p>
+                            <p class="instructor-email">brown@university.edu</p>
+                        </div>
+                        <button class="contact-teacher-btn">
+                            <i class="fa-regular fa-envelope"></i>
+                            Contact Teacher
+                        </button>
+                    </div>
+
+                    <div class="course-materials">
+                        <h4 class="course-materials-title">Course Materials</h4>
+                        <div class="course-materials-list">
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Python Programming Guide</p>
+                                    <p class="course-material-desc">Complete Python programming reference</p>
+                                    <p class="course-material-size">4.0 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$15.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Data Structures Lecture</p>
+                                    <p class="course-material-desc">Advanced data structures and examples</p>
+                                    <p class="course-material-size">3.1 MB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$9</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="course-material-row">
+                                <div class="course-material-info">
+                                    <p class="course-material-name">Project Requirements</p>
+                                    <p class="course-material-desc">Final project specifications</p>
+                                    <p class="course-material-size">862 KB</p>
+                                </div>
+                                <div class="course-material-purchase">
+                                    <p class="course-material-price">$4.99</p>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/notification.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+</body>
+
+</html>

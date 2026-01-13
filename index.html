@@ -15,51 +15,56 @@
 </head>
 
 <body class="dashboard-body">
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <img src="img/logo.png" alt="Bachillerato's Mind" class="sidebar-logo" />
         </div>
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <span class="nav-label">DASHBOARD</span>
-                <a href="#" class="nav-item active">
+                <a href="index.html" class="nav-item active">
                     <i class="fa-regular fa-calendar"></i>
                     <span>THIS WEEK</span>
                 </a>
-                <a href="#" class="nav-item has-badge">
+                <a href="schedule.html" class="nav-item has-badge">
                     <i class="fa-regular fa-clock"></i>
                     <span>Schedule</span>
-                    <span class="badge"></span>
+                    <span class="badge">1</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="courses.html" class="nav-item">
                     <i class="fa-solid fa-book"></i>
                     <span>Courses</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="materials.html" class="nav-item">
                     <i class="fa-regular fa-file-lines"></i>
                     <span>Materials</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="store.html" class="nav-item">
                     <i class="fa-solid fa-store"></i>
                     <span>Store</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="grades.html" class="nav-item">
                     <i class="fa-solid fa-chart-simple"></i>
                     <span>Grades</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="progress.html" class="nav-item">
                     <i class="fa-solid fa-chart-line"></i>
                     <span>Progress</span>
                 </a>
-                <a href="#" class="nav-item">
+                <a href="messages.html" class="nav-item">
                     <i class="fa-regular fa-comment"></i>
                     <span>Messages</span>
                 </a>
             </div>
         </nav>
         <div class="sidebar-footer">
-            <a href="#" class="nav-item">
+            <a href="settings.html" class="nav-item">
                 <i class="fa-solid fa-gear"></i>
                 <span>SETTINGS</span>
             </a>
@@ -75,14 +80,64 @@
         <!-- Topbar -->
         <header class="topbar">
             <div class="topbar-end">
-                <button class="notification-btn">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="notification-badge"></span>
-                </button>
-                <div class="user-profile">
+                <div class="notification-wrapper">
+                    <button class="notification-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+
+                    <!-- Notifications Dropdown -->
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <div class="notification-title-section">
+                                <h3 class="notification-title">Notifications</h3>
+                                <span class="notification-count">2 unread</span>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="#" class="mark-read-link">Mark all read</a>
+                                <button class="close-dropdown-btn">
+                                    <i class="fa-solid fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="notification-content">
+                            <div class="notification-item">
+                                <div class="notification-icon grade-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">New Grade Posted</h4>
+                                    <p class="notification-item-desc">Math Mock Exam 2: 8.3/10 - Great improvement from
+                                        your last mock exam! Keep up the...</p>
+                                    <span class="notification-time">41m ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon calendar-icon">
+                                    <i class="fa-solid fa-calendar-alt"></i>
+                                </div>
+                                <div class="notification-text">
+                                    <h4 class="notification-item-title">Physics Class Rescheduled</h4>
+                                    <p class="notification-item-desc">Your Tuesday Physics class has been moved from
+                                        4:00 PM to 5:30 PM due to...</p>
+                                    <span class="notification-time">2h ago</span>
+                                </div>
+                                <div class="notification-indicator">
+                                    <span class="new-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="profile.html" class="user-profile">
                     <span class="user-name">Adam Czajkowski</span>
                     <img src="img/avatar.png" alt="User Avatar" class="user-avatar" />
-                </div>
+                </a>
             </div>
         </header>
 
@@ -390,6 +445,9 @@
             </div>
         </main>
     </div>
+
+    <script src="js/notification.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
 </body>
 
 </html>
