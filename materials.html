@@ -205,32 +205,7 @@
 
     <script src="js/notification.js"></script>
     <script src="js/sidebar-toggle.js"></script>
-    if (notificationCount) {
-    notificationCount.textContent = '0 unread';
-    }
-    const notificationBadge = document.querySelector('.notification-badge');
-    if (notificationBadge) {
-    notificationBadge.style.display = 'none';
-    }
-    });
-    }
-
-    // Download functionality
-    const downloadButtons = document.querySelectorAll('.material-download');
-    downloadButtons.forEach(button => {
-    button.addEventListener('click', () => {
-    const materialItem = button.closest('.material-item');
-    const materialName = materialItem.querySelector('.material-name').textContent;
-
-    // Show a download notification
-    alert(`Downloading: ${materialName}`);
-
-    // In a real application, this would trigger an actual file download
-    // For demo purposes, we're just showing an alert
-    });
-    });
-    </script>
-    <script src="js/sidebar-toggle.js"></script>
+    <script src="js/materials.js"></script>
 </body>
 
 </html>
