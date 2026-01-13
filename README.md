@@ -66,7 +66,13 @@ Bachilleratos-Mind/
 ├── 🎨 style.css               # Global styles
 ├── 📁 js/                     # JavaScript files
 │   ├── sidebar-toggle.js      # Sidebar navigation
-│   └── notification.js        # Notification system
+│   ├── notification.js        # Notification system
+│   ├── cart.js                # Shopping cart functionality
+│   ├── materials.js           # Materials and download functionality
+│   ├── messages.js            # Messaging system
+│   ├── profile.js             # Profile management
+│   ├── settings.js            # Settings page functionality
+│   └── store.js               # Store page functionality
 ├── 📁 img/                    # Images and assets
 ├── 📋 CSS_NAMING_CONVENTIONS.md        # CSS naming guidelines
 ├── 📋 MOBILE_REFACTOR_REPORT.md        # Mobile optimization report
@@ -95,6 +101,7 @@ Features include:
 - ✅ CSS code optimization and cleanup
 - ✅ Consistent naming conventions applied
 - ✅ All core pages implemented
+- ✅ JavaScript functionality refactored into separate files (cart.js, messages.js, profile.js, settings.js, store.js)
 
 ## 🤝 Contributing
 
